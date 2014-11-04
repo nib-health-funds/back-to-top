@@ -12,13 +12,15 @@ module.exports = function(options) {
   var hc = options.hideClass    || 'is-hidden';
   var hd = options.hideDistance || 0.25;
 
-  window.addEventListener('scroll', function showOrHide() {
+  function showOrHide() {
     if (window.scrollY > window.innerHeight*hd) { //show the back-to-top button when the user has scrolled down x% of the window
       el.classList.remove(hc);
     } else {
       el.classList.add(hc);
     }
-  });
+  }
+
+  window.addEventListener('scroll', showOrHide);
 
   el.addEventListener('click', function() {
     window.scrollTo(0,0);
