@@ -13,7 +13,6 @@ module.exports = function(options) {
   var hd = options.hideDistance || 0.25;
 
   window.addEventListener('scroll', function() {
-    console.log(window.scrollY);
     if (window.scrollY > window.innerHeight*hd) { //show the back-to-top button when the user has scrolled down x% of the window
       el.classList.remove(hc);
     } else {
