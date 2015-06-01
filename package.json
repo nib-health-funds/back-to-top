@@ -1,0 +1,9 @@
+{
+  "name": "@nib/back-to-top",
+  "version": "0.1.6",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nib-health-funds/back-to-top.git"
+  }
+}
