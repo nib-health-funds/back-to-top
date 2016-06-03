@@ -1,3 +1,4 @@
+var scrollToY = require('scroll-to-y');
 
 /**
  * Hook up a back-to-top button - the button will only be visible when the user has scrolled a certain percentage of the page
@@ -23,7 +24,7 @@ module.exports = function(options) {
   window.addEventListener('scroll', showOrHide);
 
   el.addEventListener('click', function() {
-    window.scrollTo(0,0);
+    scrollToY(0, 400, 'easeOutSine');
   });
 
   showOrHide();
